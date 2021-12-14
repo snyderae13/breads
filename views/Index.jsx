@@ -4,13 +4,13 @@ const Default = require('./layout/Default')
 
 function Index({ breads }) {
     return (
-        //default call acts as entry for html.children in default file
+
         <Default>
             <h2>Index page</h2>
             <ul>
                 {
                     breads.map((bread, index) => {
-                        return (<li key={index}><a href={`/breads/${index}`}>{bread.name}</a></li>)
+                        return (<li key={index}><a href={`/breads/${bread.id}`}>{bread.name}</a></li>)
                     })
                 }
             </ul>
